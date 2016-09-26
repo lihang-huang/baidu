@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>百度一下，你就知道</title>
+    <link rel="stylesheet" href="../stylesheets/cube.min.css">
+    <!-- 重置文件 -->
+    <link rel="stylesheet" href="../stylesheets/baidu.css">
+    <script src="../javascript/jquery.1.10.2.min.js"></script>
+</head>
+
+<body>
+    <div class="skin-background"></div>
+    <div class="top-fix">
+        <a href=""><img src="../img/top-icon.png" alt=""></a>
+    </div>
+    <header>
+        <div class="wrap-left">
+            <div class="weather" id="weather">
+                <span class="show-city">上海：</span>
+                <span class="show-icon"></span>
+                <span class="show-temp">33℃</span>
+                <span class="show-polution-name">优</span>
+                <span class="show-polution-num">30</span>
+                <span class="show-vertical">|</span>
+            </div>
+            <div class="s-links">
+                <a href="" title="宝箱">宝箱</a>
+                <a class="change-skin" href="" title="换肤">换肤
+                    <div class="background">
+                        <img id="bg1" src="../img/background1.jpg" alt="">
+                        <img id="bg2" src="../img/background2.jpg" alt="">
+                        <span id="cancel">不设置背景</span>
+                    </div>
+                </a>
+                <a href="" title="消息">消息</a>
+            </div>
+        </div>
+        <div class="wrap-right">
+            <p id="more-up">更多产品</p>
+            <a id="set" href="">设置
+                <div class="inner inner-set" id="set-inner">
+                    <span>搜索设置</span>
+                    <span>高级搜索</span>
+                    <span>关闭预测</span>
+                    <span>搜索历史</span>
+                </div>
+            </a>
+            <a id="user" href="">黄力航
+                <div class="inner inner-user" id="user-inner">
+                    <span>我的VIP</span>
+                    <span>个人中心</span>
+                    <span>账号设置</span>
+                    <span>意见反馈</span>
+                    <span>退出</span>
+                </div>
+            </a>
+            <a class="bold" href="">贴吧</a>
+            <a class="bold" href="">视频</a>
+            <a class="bold" href="">地图</a>
+            <a class="bold" href="">hao123</a>
+            <a class="bold" href="">新闻</a>
+            <a class="bold" href="">糯米</a>
+        </div>
+    </header>
+    <div class="more" id="more">
+        <p>更多产品</p>
+        <div class="more-list" id="more-list">
+            <a href="http://music.baidu.com"><span id="li1"></span>音乐</a>
+            <a href="http://image.baidu.com"><span id="li2"></span>图片</a>
+            <a href="http://zhidao.baidu.com"><span id="li3"></span>知道</a>
+            <a href="http://wenku.baidu.com"><span id="li4"></span>文库</a>
+            <a href="http://top.baidu.com"><span id="li5"></span>风云榜</a>
+            <a href="http://e.baidu.com/?refer=888"><span id="li6"></span>百度推广</a>
+            <a href="https://www.baidu.com/more/">全部产品>></a>
+        </div>
+    </div>
+    <div class="weather-data" id="weather-data">
+        <div class="weather-concent">
+            <div class="weather-top">
+                <a href="" id="date">08月06日</a>
+                <a href="" id="c-date">农历&nbsp;七月初四</a>
+                <a href="" id="future-weather">未来七天天气</a>
+                <span class="setting">设置</span>
+            </div>
+            <div class="weather-down">
+                <div class="today">
+                    <p>今天(周日)</p>
+                    <img src="../img/weather1.jpg" alt="">
+                    <p>31℃</p>
+                    <p>多云</p>
+                    <p>东南风微风</p>
+                </div>
+                <div class="nextday">
+                    <p>明天(周一)</p>
+                    <img src="../img/weather2.jpg" alt="">
+                    <p>33~27℃</p>
+                    <p>阵雨转多云</p>
+                    <p>东风微风</p>
+                </div>
+                <div class="next2day">
+                    <p>后天(周二)</p>
+                    <img src="../img/weather2.jpg" alt="">
+                    <p>33~27℃</p>
+                    <p>阵雨转多云</p>
+                    <p>东风微风</p>
+                </div>
+                <div class="next3day">
+                    <p>周三</p>
+                    <img src="../img/weather3.jpg" alt="">
+                    <p>34~27℃</p>
+                    <p>多云</p>
+                    <p>东风微风</p>
+                </div>
+                <div class="next4day">
+                    <p>周四</p>
+                    <img src="../img/weather3.jpg" alt="">
+                    <p>34~28℃</p>
+                    <p>多云</p>
+                    <p>东风微风</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search">
+        <div class="logo" id="logo"></div>
+        <form class="search-wrap" action="">
+            <div class="con">
+                <input type="text">
+                <span class="camera"></span>
+            </div>
+            <input type="submit" value="百度一下">
+        </form>
+    </div>
+    <nav>
+        <div class="nav-wrap">
+            <div class="container-nav">
+                <div id="inner-con">
+                    <span id="mystar" data-value="0"><div id="mystar-icon"></div>我的关注</span>
+                    <span id="advise" data-value="1">推荐</span>
+                    <span data-value="2">导航</span>
+                    <span data-value="3">视频</span>
+                    <span data-value="4">购物</span>
+                    <span data-value="5">奥运</span>
+                    <i id="setting-button"></i>
+                </div>
+            </div>
+            <div class="hide-nav" id="hide-nav">
+                <div class="hide-concent">
+                    <div class="top-concent clearfix">
+                        <div class="left-concent">
+                            <h3>已订阅频道</h3>
+                            <div class="guanzhu">我的关注</div>
+                            <div class="s-cardsetting-content">
+                                <div class="s-mod-item">
+                                    <div class="s-mod-icon"></div>
+                                    <div class="s-mod-title">推荐</div>
+                                </div>
+                                <div class="s-mod-item">
+                                    <div class="s-mod-icon"></div>
+                                    <div class="s-mod-title">导航</div>
+                                </div>
+                                <div class="s-mod-item">
+                                    <div class="s-mod-icon"></div>
+                                    <div class="s-mod-title">视频</div>
+                                </div>
+                                <div class="s-mod-item">
+                                    <div class="s-mod-icon"></div>
+                                    <div class="s-mod-title">购物</div>
+                                </div>
+                                <div class="s-mod-item">
+                                    <div class="s-mod-icon"></div>
+                                    <div class="s-mod-title">奥运</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="right-concent">
+                            <h3>未订阅频道</h3>
+                            <div class="s-cardsetting-content">
+                                <div class="s-mod-item">
+                                    <div class="s-mod-icon"></div>
+                                    <div class="s-mod-title">体育</div>
+                                </div>
+                                <div class="s-mod-item">
+                                    <div class="s-mod-icon"></div>
+                                    <div class="s-mod-title">小说</div>
+                                </div>
+                                <div class="s-mod-item">
+                                    <div class="s-mod-icon"></div>
+                                    <div class="s-mod-title">音乐</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container con-mystar" id="con-mystar">
+                <div class="inner-mynav">
+                    <div>
+                        <em></em>
+                        <span>我的导航</span>
+                        <span>(0)</span>
+                    </div>
+                </div>
+                <div>
+                    <span class="plus-icon"></span>
+                    <span class="selfset">自定义</span>
+                </div>
+            </div>
+            <div class="container con-advise" id="con-advise">
+                <div class="inner-con-advise">
+                    <div class="side-news">
+                        <div class="side-news-title">
+                            <a id="left" href="">实时热点</a>
+                            <a id="right" href="">换一换<i id="news-change"></i></a>
+                        </div>
+                        <ul class="side-news-rank">
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">中国出场切广告</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">菲总统骂美大使</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">喝矿泉水烧喉咙</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">叶诗文无缘决赛</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">里约自行车道爆炸</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">中国奥运首日无金</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">伊能静感染入院</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">警察拘禁前女友</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">南海仲裁名存实亡</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">上万白蚁藏天花板</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">办证明发现被死刑</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">疑禁韩令名单外流</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">女研究生街头流浪</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">郑赛赛爆冷晋级</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">翻5吨垃圾找手机</a>
+                                    </span>
+                                </span>
+                            </li>
+                            <li>
+                                <em></em>
+                                <span class="news-title">
+                                    <span class="news-link">
+                                        <a href="">话费余额8千万</a>
+                                    </span>
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="main-news-con">
+                        <div class="main-new">
+                            <img src="../img/mainnew.jpg" alt="">
+                            <div class="main-new-back"></div>
+                            <div class="main-new-wraper">
+                                <h1>
+                                    <a href="">澳洲选手：孙杨是兴奋剂选手</a>
+                                </h1>
+                                <p>新闻发布会上，孙杨与霍顿并排而坐，俩人形同陌路。</p>
+                            </div>
+                        </div>
+                        <ul class="bottom-news">
+                            <li>
+                                <a href="">
+                                    <img src="../img/bottomnew1.jpg" alt="">
+                                    <span class="bottom-back"></span>
+                                    <span class="bottom-title">颁奖式中国国旗疑出错</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../img/bottomnew2.jpg" alt="">
+                                    <span class="bottom-back"></span>
+                                    <span class="bottom-title">廉价奥运打脸媒体套路</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../img/bottomnew3.jpg" alt="">
+                                    <span class="bottom-back"></span>
+                                    <span class="bottom-title">孙杨情绪失控痛哭</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="../img/bottomnew4.jpg" alt="">
+                                    <span class="bottom-back"></span>
+                                    <span class="bottom-title">荷兰女排主教练火了</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="news-flash-tips">
+                        <div class="left-line s-opacity-blank8"></div>
+                        <div class="tips-content">
+                            <div class="tips-icon"></div>
+                            <span>以下信息根据您的兴趣推荐</span>
+                        </div>
+                        <div class="right-line s-opacity-blank8"></div>
+                    </div>
+                    <div class="news-list-wraper">
+                        <div class="news-item">
+                            <h2>
+                            <a href="">约你侃奥运——聊聊里约奥运戳中你的嗨点槽点</a>
+                            </h2>
+                            <div class="from">
+                                <span><a href=""> 腾讯·大成网 </a></span>
+                                <span>08-07 17:31</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-list">
+                        <div class="news-item">
+                            <h2>
+                            <a href="">有趣!咱北京妞竟成奥地利旗手 曾是张怡宁队友</a>
+                            </h2>
+                            <a href=""><img src="../img/news2.jpg" alt=""></a>
+                            <div class="from">
+                                <span><a href="">  21CN游戏  </a></span>
+                                <span>08-07 04:47</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h2>
+                            <a href=""> 高校男女共用浴室 学生：与朋友租钟点房洗澡</a>
+                            </h2>
+                            <a href=""><img src="../img/news3.jpg" alt=""></a>
+                            <div class="from">
+                                <span><a href="">  21CN游戏  </a></span>
+                                <span>08-07 04:47</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h2>
+                            <a href=""> 里约奥运会自行车赛道附近发生爆炸 无人受伤</a>
+                            </h2>
+                            <a href=""><img src="../img/news4.jpg" alt=""></a>
+                            <div class="from">
+                                <span><a href="">  21CN游戏  </a></span>
+                                <span>08-07 04:47</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h2>
+                            <a href=""> 4届奥运元老&中国射击领军人 杜丽：失金但不遗憾</a>
+                            </h2>
+                            <a href=""><img src="../img/news5.jpg" alt=""></a>
+                            <div class="from">
+                                <span><a href="">  21CN游戏  </a></span>
+                                <span>08-07 04:47</span>
+                            </div>
+                        </div>
+                        <div class="news-item">
+                            <h2>
+                            <a href="">有趣!咱北京妞竟成奥地利旗手 曾是张怡宁队友</a>
+                            </h2>
+                            <a href=""><img src="../img/news2.jpg" alt=""></a>
+                            <div class="from">
+                                <span><a href="">  21CN游戏  </a></span>
+                                <span>08-07 04:47</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container con-nav" id="con-nav">
+                <div class="con-nav-p">
+                    <h1>猜你喜欢</h1>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s1.png" alt="">
+                            <span>百度糯米</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s2.png" alt="">
+                            <span>京东商城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s3.png" alt="">
+                            <span>1号店</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s4.png" alt="">
+                            <span>苏宁易购</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s5.png" alt="">
+                            <span>唯品会</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s6.png" alt="">
+                            <span>当当网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s7.png" alt="">
+                            <span>淘宝网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s8.png" alt="">
+                            <span>微信</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s9.png" alt="">
+                            <span>斗鱼</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s10.png" alt="">
+                            <span>腾讯</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s11.png" alt="">
+                            <span>爱奇艺</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s12.png" alt="">
+                            <span>铁路客户端</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s13.png" alt="">
+                            <span>优酷网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s14.png" alt="">
+                            <span>网易</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s15.png" alt="">
+                            <span>58同城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s16.png" alt="">
+                            <span>新浪微博</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s17.png" alt="">
+                            <span>支付宝</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s18.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s19.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s20.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s21.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s22.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="con-nav-p">
+                    <h1>资讯信息</h1>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s1.png" alt="">
+                            <span>百度糯米</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s2.png" alt="">
+                            <span>京东商城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s3.png" alt="">
+                            <span>1号店</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s4.png" alt="">
+                            <span>苏宁易购</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s5.png" alt="">
+                            <span>唯品会</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s6.png" alt="">
+                            <span>当当网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s7.png" alt="">
+                            <span>淘宝网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s8.png" alt="">
+                            <span>微信</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s9.png" alt="">
+                            <span>斗鱼</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s10.png" alt="">
+                            <span>腾讯</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s11.png" alt="">
+                            <span>爱奇艺</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s12.png" alt="">
+                            <span>铁路客户端</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s13.png" alt="">
+                            <span>优酷网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s14.png" alt="">
+                            <span>网易</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s15.png" alt="">
+                            <span>58同城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s16.png" alt="">
+                            <span>新浪微博</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s17.png" alt="">
+                            <span>支付宝</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s18.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s19.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s20.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s21.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s22.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="con-nav-p">
+                    <h1>娱乐休闲</h1>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s1.png" alt="">
+                            <span>百度糯米</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s2.png" alt="">
+                            <span>京东商城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s3.png" alt="">
+                            <span>1号店</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s4.png" alt="">
+                            <span>苏宁易购</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s5.png" alt="">
+                            <span>唯品会</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s6.png" alt="">
+                            <span>当当网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s7.png" alt="">
+                            <span>淘宝网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s8.png" alt="">
+                            <span>微信</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s9.png" alt="">
+                            <span>斗鱼</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s10.png" alt="">
+                            <span>腾讯</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s11.png" alt="">
+                            <span>爱奇艺</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s12.png" alt="">
+                            <span>铁路客户端</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s13.png" alt="">
+                            <span>优酷网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s14.png" alt="">
+                            <span>网易</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s15.png" alt="">
+                            <span>58同城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s16.png" alt="">
+                            <span>新浪微博</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s17.png" alt="">
+                            <span>支付宝</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s18.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s19.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s20.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s21.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s22.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container con-video" id="con-video">
+                <div class="water-container">
+                    <div class="s-video-wrapper clearfix">
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">欢乐喜剧人 第二季</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">武林风</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">非诚勿扰</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">弹丸论破之希望的学园和绝望高中生</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="water-container">
+                    <div class="s-video-wrapper clearfix">
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">欢乐喜剧人 第二季</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">武林风</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">非诚勿扰</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">弹丸论破之希望的学园和绝望高中生</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="water-container">
+                    <div class="s-video-wrapper clearfix">
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">欢乐喜剧人 第二季</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">武林风</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">非诚勿扰</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">弹丸论破之希望的学园和绝望高中生</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container con-shopping" id="con-shopping">
+                <div class="con-nav-p">
+                    <h1>猜你喜欢</h1>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s1.png" alt="">
+                            <span>百度糯米</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s2.png" alt="">
+                            <span>京东商城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s3.png" alt="">
+                            <span>1号店</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s4.png" alt="">
+                            <span>苏宁易购</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s5.png" alt="">
+                            <span>唯品会</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s6.png" alt="">
+                            <span>当当网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s7.png" alt="">
+                            <span>淘宝网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s8.png" alt="">
+                            <span>微信</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s9.png" alt="">
+                            <span>斗鱼</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s10.png" alt="">
+                            <span>腾讯</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s11.png" alt="">
+                            <span>爱奇艺</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s12.png" alt="">
+                            <span>铁路客户端</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s13.png" alt="">
+                            <span>优酷网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s14.png" alt="">
+                            <span>网易</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s15.png" alt="">
+                            <span>58同城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s16.png" alt="">
+                            <span>新浪微博</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s17.png" alt="">
+                            <span>支付宝</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s18.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s19.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s20.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s21.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s22.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="con-nav-p">
+                    <h1>资讯信息</h1>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s1.png" alt="">
+                            <span>百度糯米</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s2.png" alt="">
+                            <span>京东商城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s3.png" alt="">
+                            <span>1号店</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s4.png" alt="">
+                            <span>苏宁易购</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s5.png" alt="">
+                            <span>唯品会</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s6.png" alt="">
+                            <span>当当网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s7.png" alt="">
+                            <span>淘宝网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s8.png" alt="">
+                            <span>微信</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s9.png" alt="">
+                            <span>斗鱼</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s10.png" alt="">
+                            <span>腾讯</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s11.png" alt="">
+                            <span>爱奇艺</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s12.png" alt="">
+                            <span>铁路客户端</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s13.png" alt="">
+                            <span>优酷网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s14.png" alt="">
+                            <span>网易</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s15.png" alt="">
+                            <span>58同城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s16.png" alt="">
+                            <span>新浪微博</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s17.png" alt="">
+                            <span>支付宝</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s18.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s19.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s20.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s21.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s22.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="con-nav-p">
+                    <h1>娱乐休闲</h1>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s1.png" alt="">
+                            <span>百度糯米</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s2.png" alt="">
+                            <span>京东商城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s3.png" alt="">
+                            <span>1号店</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s4.png" alt="">
+                            <span>苏宁易购</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s5.png" alt="">
+                            <span>唯品会</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s6.png" alt="">
+                            <span>当当网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s7.png" alt="">
+                            <span>淘宝网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s8.png" alt="">
+                            <span>微信</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s9.png" alt="">
+                            <span>斗鱼</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s10.png" alt="">
+                            <span>腾讯</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s11.png" alt="">
+                            <span>爱奇艺</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s12.png" alt="">
+                            <span>铁路客户端</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s13.png" alt="">
+                            <span>优酷网</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s14.png" alt="">
+                            <span>网易</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s15.png" alt="">
+                            <span>58同城</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s16.png" alt="">
+                            <span>新浪微博</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s17.png" alt="">
+                            <span>支付宝</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s18.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s19.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s20.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s21.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s22.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                    <div class="cell">
+                        <a href="">
+                            <img src="../img/icon-s23.png" alt="">
+                            <span>4399小游戏</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="container con-olpc" id="con-olpc">
+                <div class="water-container">
+                    <div class="s-video-wrapper clearfix">
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">欢乐喜剧人 第二季</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">武林风</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">非诚勿扰</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">弹丸论破之希望的学园和绝望高中生</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="water-container">
+                    <div class="s-video-wrapper clearfix">
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">欢乐喜剧人 第二季</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">武林风</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">非诚勿扰</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">弹丸论破之希望的学园和绝望高中生</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="water-container">
+                    <div class="s-video-wrapper clearfix">
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video1.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">欢乐喜剧人 第二季</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video2.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">武林风</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video3.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">非诚勿扰</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="video-col clearfix">
+                            <div class="pic">
+                                <a class="img-click" href="">
+                                    <img src="../img/video4.jpg" alt="">
+                                </a>
+                            </div>
+                            <div class="v-txt">
+                                <div class="text">
+                                    <a class="s-opacity-blank3" href="">弹丸论破之希望的学园和绝望高中生</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="down-sign">
+        <p>滚动查看更多</p>
+        <div class="rect"></div>
+    </div>
+    <footer>
+        <div class="bottom-firstline">
+            <a href="">设为首页</a>
+            <span>&copy;2016&nbsp;Baidu&nbsp;</span>
+            <a href="">使用百度前必读</a>
+            <a href="">意见反馈</a>
+            <span>京ICP证030173号</span>
+        </div>
+        <div class="bottom-secondline">
+            <a href="">
+                <i class="footer-icon"></i>
+                <span>京公网安备11000002000001号</span>
+            </a>
+        </div>
+    </footer>
+    <div class="back-to-top">
+        <div class="to-top">回到顶部</div>
+        <span class="icon"></span>
+    </div>
+    <script src="../javascript/baidu.js"></script>
+</body>
+
+</html>
